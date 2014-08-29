@@ -379,9 +379,9 @@
                 class="messages-message result-td-78e731027d8fd50ed642340b7c9a63b3">
                 @if(r.hasHighlightedField("message")) {
                     @* Need to use map{} here because a for() loop would produce unwanted newlines and thus extra spaces in the message. *@
-                    @{r.getHighlightedField("message").getChunks(r.getFields).map {x => if(x.avoidHtmlEscape) { Html(x.getString) } else { x.getString }}}
+                   <div>@{r.getHighlightedField("message").getChunks(r.getFields).map {x => if(x.avoidHtmlEscape) { Html(x.getString) } else { x.getString }}}</div>
                 } else {
-                    @r.getFields.get("message")
+                    <div>@r.getFields.get("message")</div>
                 }
             </td>
 			
